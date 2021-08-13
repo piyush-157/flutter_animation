@@ -44,27 +44,7 @@ class _HomePageState extends State<HomePage> {
       hereBottom = 22; hereLeft = 118; hereSize = 16;
     });
   }
-
-  // void displayPersistentBottomSheet() {
-  //   _scaffoldKey.currentState.showBottomSheet<void>((BuildContext context) {
-  //     return Container(
-  //       decoration: BoxDecoration(
-  //           border: Border(top: BorderSide(color: Colors.black)),
-  //           color: Colors.grey),
-  //       child: Padding(
-  //         padding: const EdgeInsets.all(32.0),
-  //         child: Text(
-  //           'This is a persistent bottom sheet. Drag downwards to dismiss it.',
-  //           textAlign: TextAlign.center,
-  //           style: TextStyle(
-  //             fontSize: 24.0,
-  //           ),
-  //         ),
-  //       ),
-  //     );
-  //   });
-  // }
-
+  
   void _showModal() {
     Future<void> future = showModalBottomSheet<void>(
       context: context,
@@ -72,8 +52,7 @@ class _HomePageState extends State<HomePage> {
       builder: (BuildContext context) {
         return Container(
           height: 350.0,
-          color: Colors.transparent, //could change this to Color(0xFF737373),
-          //so you don't have to change MaterialApp canvasColor
+          color: Colors.transparent,
           child: new Container(
               decoration: new BoxDecoration(
                   color: Colors.white,
@@ -144,7 +123,6 @@ class _HomePageState extends State<HomePage> {
                                   animationDuration: Duration(seconds: 1),
                                   delayDuration: Duration(milliseconds: 300),
                                   child: Container(
-                                    // child: Image.asset("assets/plant1.jpg"),
                                     width: 200,
                                     decoration: BoxDecoration(
                                       image: DecorationImage(
@@ -174,7 +152,6 @@ class _HomePageState extends State<HomePage> {
     print('modal closed');
     isTapped = false;
     onSheetClosed();
-    // Navigator.of(context).pop();
   }
 
   @override
